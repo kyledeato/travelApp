@@ -31,12 +31,17 @@ const getWeather = async () => {
 const kToF = (kelvin) => {
     return Math.round((kelvin - 273) * (9/5) + 32);
 }
+//M/sec to mph
+const windMph = (meterPerSecond) => {
+    return (meterPerSecond * 2.237).toFixed(1);
+}
 const renderWeather = (data) => {
     document.querySelector("#weather-degrees").innerHTML = kToF(data.main.temp) + "°F";
-    document.querySelector("#feels-like").innerHTML = "Feels like: " + kToF(data.main.temp) + "°F";
+    document.querySelector("#wind").innerHTML = windMph(data.wind.speed) + " mph";
     document.querySelector("#icon").src = "http://openweathermap.org/img/wn/" + data.weather[0].icon +".png";
     document.querySelector("#overview").innerHTML = data.weather[0].description;
-    document.querySelector("#humidity").innerHTML = kToF(data.main.temp) + "°F";
+    document.querySelector("#humidity").innerHTML = "Humidity: " + data.main.humidity + "%";
+    document.querySelector("#city").innerHTML = data.name;
 }
 
 const executeSearch = () => {

@@ -66,3 +66,13 @@ input[type="text"]
 .content {
     font-size: 26px;
 }
+
+.iconOver {
+    display: flex;
+    align-items: center;
+}
+
+#overview {
+    text-transform: capitalize;
+    margin-left: 5px;
+}
