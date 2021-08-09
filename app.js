@@ -90,6 +90,8 @@ const executeSearch = () => {
     event.preventDefault()
     getWeather().then(data => renderWeather(data));
     getVenues().then(data => renderVenues(data));
+    document.querySelector(".bottom").style.visibility = "visible";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + input.value +"')"
 }
 
 button.addEventListener('click', executeSearch);

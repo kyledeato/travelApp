@@ -45,6 +45,7 @@ input[type="text"]
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
 }
 .weather-card, .things-to-do { 
     display: flex;
@@ -75,4 +76,16 @@ input[type="text"]
 #overview {
     text-transform: capitalize;
     margin-left: 5px;
+}
+
+.attractions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 5px 0;
+
+}
+.sub-attractions {
+    padding: 0 10px;
+    line-height: 5px;
 }
