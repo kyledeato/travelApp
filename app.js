@@ -91,6 +91,7 @@ const executeSearch = () => {
     getWeather().then(data => renderWeather(data));
     getVenues().then(data => renderVenues(data));
     document.querySelector(".bottom").style.visibility = "visible";
+    //change background picture of city input
     document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + input.value +"')"
 }
 
